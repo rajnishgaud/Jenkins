@@ -1,12 +1,13 @@
+# main.tf
 provider "kubernetes" {
   config_path = "~/.kube/config"
 }
 
-resource "kubernetes_pod" "example" {
+resource "kubernetes_pod" "nginx" {
   metadata {
-    name = "demo-pod"
+    name = "nginx-example"
     labels = {
-      app = "demo"
+      app = "nginx"
     }
   }
 
